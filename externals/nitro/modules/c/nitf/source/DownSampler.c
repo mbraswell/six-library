@@ -942,7 +942,11 @@ nitf_Uint32 rowsInLastWindow,
 nitf_Uint32 colsInLastWindow,
 nitf_Error * error)
 {
-
+	nitf_Error_init(error, "Function is hacked out",
+                        NITF_CTXT, NITF_ERR_INVALID_PARAMETER);
+    return (0);
+	
+/*
     if (numBands != 2)
     {
         nitf_Error_init(error, "Read request must be exactly 2 bands",
@@ -1015,7 +1019,7 @@ nitf_Error * error)
         nitf_Error_init(error, "Invalid pixel type",
                         NITF_CTXT, NITF_ERR_INVALID_PARAMETER);
         return (0);
-    }
+    }*/
 }
 
 NITFPRIV(void) Select2DownSample_destruct(NITF_DATA * data)
